@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>niqiX.com — Premium Ultra-Short Tech & Brand Domain Property</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans, Outfit, & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#a855f7',
+                            purpleGlow: '#c084fc',
+                            dark: '#000000',
+                            card: '#08080c',
+                            border: 'rgba(168, 85, 247, 0.22)',
+                            blue: '#3b82f6',
+                            red: '#ef4444',
+                            slate: '#64748b'
+                        }
+                    },
+                    fontFamily: {
+                        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow-pulse': 'glow 3s ease-in-out infinite alternate',
+                        'shimmer': 'shimmer 2.5s infinite linear',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        glow: {
+                            '0%': { opacity: 0.4 },
+                            '100%': { opacity: 0.9 },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #030305;
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        .font-jakarta {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .font-outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .brand-text {
+            color: #ffffff;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            font-family: 'Outfit', sans-serif;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+        }
+
+        .brand-x {
+            color: #c084fc;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            font-family: 'Outfit', sans-serif;
+            text-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-com {
+            color: #94a3b8;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Ambient Immersive Glowing Gradients (خلفية هادئة ومريحة للعين) */
+        .bg-grid-pattern {
+            background-size: 48px 48px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+        }
+
+        .glow-radial-top {
+            background: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.08) 0%, rgba(59, 130, 246, 0.03) 40%, rgba(3, 3, 5, 0) 65%);
+        }
+
+        .glow-radial-bottom {
+            background: radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.02) 40%, rgba(3, 3, 5, 0) 65%);
+        }
+
+        /* Ultra Premium Glassmorphism Card Style */
+        .glass-card {
+            background: linear-gradient(135deg, rgba(13, 13, 22, 0.9) 0%, rgba(8, 8, 14, 0.95) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(168, 85, 247, 0.18);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(168, 85, 247, 0.45);
+            box-shadow: 0 0 35px rgba(168, 85, 247, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Shimmer Text Effect */
+        .shimmer-text {
+            background: linear-gradient(90deg, #f8fafc 0%, #c084fc 50%, #f8fafc 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+
+        /* Glow Button Animation */
+        .btn-glow {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: linear-gradient(45deg, #a855f7, #3b82f6, #ec4899, #a855f7);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            filter: blur(10px);
+        }
+
+        .btn-glow:hover::after {
+            opacity: 0.85;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030305;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e1b4b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a855f7;
+        }
+    </style>
+</head>
+<body class="bg-[#030305] text-slate-100 min-h-screen flex flex-col justify-between relative selection:bg-purple-500 selection:text-white">
+
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+    <div class="fixed inset-0 glow-radial-top pointer-events-none z-0"></div>
+    <div class="fixed inset-0 glow-radial-bottom pointer-events-none z-0"></div>
+
+    <!-- Notification Toast Container -->
+    <div id="toastContainer" class="fixed top-20 right-4 sm:right-6 z-50 flex flex-col gap-3 pointer-events-none"></div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-40 w-full border-b border-white/10 bg-[#030305]/90 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-baseline group py-2">
+                <span class="brand-text text-2xl sm:text-3xl tracking-tight">niqi</span><span class="brand-x text-2xl sm:text-3xl">X</span><span class="brand-com text-lg sm:text-xl">.com</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center space-x-6 font-outfit">
+                <a href="#overview" class="text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-colors">Overview</a>
+                <a href="#buyer-benefits" class="text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-colors">Acquisition Perks</a>
+                <a href="#valuation" class="text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-colors">Brand Value</a>
+                <a href="#use-cases" class="text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-colors">Use Cases</a>
+                <a href="#escrow" class="text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-colors">Escrow Security</a>
+                <a href="#contact" class="text-xs sm:text-sm font-medium text-purple-400 hover:text-white transition-colors">Contact Owner</a>
+                <a href="#faq" class="text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
+            </div>
+
+            <!-- CTA Header Button & Mobile Toggle -->
+            <div class="flex items-center space-x-3">
+                <div class="hidden xl:flex items-center px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold font-outfit">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite] mr-2"></span>
+                    Available for Acquisition
+                </div>
+                <button onclick="openOfferModal()" class="btn-glow px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all flex items-center space-x-2 font-outfit">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span>Make Offer</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-all focus:outline-none" aria-label="Toggle Navigation">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-lg sm:text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-b border-white/10 bg-[#030305]/95 backdrop-blur-2xl px-4 pt-4 pb-6 space-y-3 font-outfit">
+            <a href="#overview" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-300 hover:text-white">Overview</a>
+            <a href="#buyer-benefits" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-300 hover:text-white">Acquisition Perks</a>
+            <a href="#valuation" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-300 hover:text-white">Brand Value</a>
+            <a href="#use-cases" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-300 hover:text-white">Use Cases</a>
+            <a href="#escrow" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-300 hover:text-white">Escrow Security</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-purple-400 hover:text-white">Contact Owner</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-sm font-medium text-slate-300 hover:text-white">FAQ</a>
+            <button onclick="toggleMobileMenu(); openOfferModal();" class="w-full mt-2 px-4 py-2.5 rounded-xl bg-purple-600 text-white font-semibold text-sm shadow-lg flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Make Offer</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="relative z-10 flex-grow">
+        
+        <section id="overview" class="pt-10 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+            
+            <!-- Category Badge -->
+            <div class="flex justify-center mb-6">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 text-[11px] sm:text-xs md:text-sm font-medium shadow-xl shadow-purple-950/50 backdrop-blur-md font-outfit">
+                    <i class="fa-solid fa-gem text-purple-400 text-xs animate-pulse"></i>
+                    <span>Elite Ultra-Short 5-Letter .COM Brandable Domain Property</span>
+                </div>
+            </div>
+
+            <!-- Hero Chromatic Logo Banner -->
+            <div class="my-2 py-2 inline-block transform hover:scale-[1.01] transition-transform duration-300 cursor-default">
+                <div class="logo-container flex items-baseline justify-center tracking-tight">
+                    <span class="brand-text text-5xl sm:text-7xl md:text-8xl lg:text-9xl">niqi</span><span class="brand-x text-5xl sm:text-7xl md:text-8xl lg:text-9xl">X</span><span class="brand-com text-2xl sm:text-3xl md:text-4xl lg:text-5xl">.com</span>
+                </div>
+            </div>
+
+            <!-- Hero Subtitle -->
+            <p class="max-w-2xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-slate-300 leading-relaxed font-light mb-8 font-outfit px-2">
+                An unforgettable, high-impact digital asset engineered for <span class="shimmer-text font-semibold">Next-Gen Tech</span>, AI Enterprises, Web3 Ecosystems, and Luxury Brands.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xs sm:max-w-md mx-auto font-outfit">
+                <button onclick="openOfferModal()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-purple-900/40 transition-all flex items-center justify-center space-x-2 group">
+                    <i class="fa-solid fa-bolt text-amber-300 group-hover:rotate-12 transition-transform text-xs"></i>
+                    <span>Acquire niqiX.com</span>
+                </button>
+                <button onclick="copyDomainName()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-slate-200 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-copy text-purple-400 text-xs"></i>
+                    <span id="copyBtnText">Copy Domain</span>
+                </button>
+            </div>
+
+            <!-- Fast Stats Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto mt-12 sm:mt-16 pt-8 border-t border-slate-800/80 font-outfit">
+                <div class="glass-card p-4 sm:p-5 rounded-xl sm:rounded-2xl">
+                    <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mb-1">Length</p>
+                    <p class="text-xl sm:text-2xl md:text-3xl font-bold text-white font-jakarta">5 Letters</p>
+                </div>
+                <div class="glass-card p-4 sm:p-5 rounded-xl sm:rounded-2xl">
+                    <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mb-1">Extension</p>
+                    <p class="text-xl sm:text-2xl md:text-3xl font-bold text-white font-jakarta">.COM <span class="text-purple-400 text-sm">👑</span></p>
+                </div>
+                <div class="glass-card p-4 sm:p-5 rounded-xl sm:rounded-2xl">
+                    <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mb-1">Memorability</p>
+                    <p class="text-xl sm:text-2xl md:text-3xl font-bold text-purple-400 font-jakarta">99.8%</p>
+                </div>
+                <div class="glass-card p-4 sm:p-5 rounded-xl sm:rounded-2xl">
+                    <p class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mb-1">Transfer Time</p>
+                    <p class="text-xl sm:text-2xl md:text-3xl font-bold text-emerald-400 font-jakarta">&lt; 24 Hrs</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="buyer-benefits" class="py-16 sm:py-20 relative bg-[#050508]/60 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-3 font-outfit">
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>Frictionless & Safe Acquisition Guarantee</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold font-outfit mb-3 tracking-tight">Designed for Buyer Peace of Mind</h2>
+                    <p class="text-slate-400 text-xs sm:text-sm md:text-base font-outfit">We prioritize absolute transparency, speed, and safety. Here is why acquiring <span class="text-white font-semibold">niqiX.com</span> is seamless and risk-free.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    
+                    <!-- Card 1 -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-emerald-500 hover:border-emerald-400 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg mb-3 shadow-lg shadow-emerald-500/10">
+                            <i class="fa-solid fa-percent"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold font-outfit text-white mb-2">Zero Buyer Fees</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            What you offer is what you pay. No hidden administration costs, commission surcharges, or surprise transfer fees.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-purple-500 hover:border-purple-400 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg mb-3 shadow-lg shadow-purple-500/10">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold font-outfit text-white mb-2">Instant Escrow Transfer</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Immediate authorization code release upon verification. Domain ownership is transferred to your account within hours.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-blue-500 hover:border-blue-400 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg mb-3 shadow-lg shadow-blue-500/10">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold font-outfit text-white mb-2">12-Hour Owner Response</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            No endless waiting. Every inquiry and price proposal receives a direct, prompt decision from the domain owner within 12 hours.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-amber-500 hover:border-amber-400 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg mb-3 shadow-lg shadow-amber-500/10">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold font-outfit text-white mb-2">Confidential & Non-Binding</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Your inquiry is strictly confidential. Inquiring or making an offer creates zero obligation or pressure to purchase.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-indigo-500 hover:border-indigo-400 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-lg mb-3 shadow-lg shadow-indigo-500/10">
+                            <i class="fa-solid fa-comments-dollar"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold font-outfit text-white mb-2">Counter-Offers Welcome</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Open to fair negotiation. We actively consider serious custom offers and structure counter-proposals to fit your budget.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-cyan-500 hover:border-cyan-400 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg mb-3 shadow-lg shadow-cyan-500/10">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold font-outfit text-white mb-2">Flexible Lease / Plans</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Spread purchase over monthly installments (3, 6, or 12 months) via Dan.com / Escrow holding while launching your project today.
+                        </p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-rose-500 hover:border-rose-400 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 text-lg mb-3 shadow-lg shadow-rose-500/10">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold font-outfit text-white mb-2">Corporate Invoices & NDA</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Official company invoicing, VAT alignment, and standard Non-Disclosure Agreements available for enterprise entities.
+                        </p>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-teal-500 hover:border-teal-400 transition-all">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 text-lg mb-3 shadow-lg shadow-teal-500/10">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold font-outfit text-white mb-2">Concierge Support</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Direct 1-on-1 assistance throughout the registrar push, DNS configuration, and ownership transfer setup.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Fast Trust Bar -->
+                <div class="mt-10 sm:mt-14 p-5 sm:p-8 glass-card rounded-3xl bg-gradient-to-r from-purple-950/30 via-black to-blue-950/30 border border-purple-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+                    <div class="flex items-center space-x-4 text-left">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center text-emerald-400 text-xl sm:text-2xl shrink-0 shadow-lg shadow-emerald-500/20">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold font-outfit text-sm sm:text-lg">100% Buyer Protection Guarantee</h4>
+                            <p class="text-[11px] sm:text-sm text-slate-400">Funds remain safely held in licensed Escrow until domain control is verified in your account.</p>
+                        </div>
+                    </div>
+                    <button onclick="openOfferModal()" class="btn-glow px-6 sm:px-8 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-xs sm:text-sm shadow-xl shrink-0 flex items-center space-x-2 font-outfit w-full sm:w-auto justify-center">
+                        <span>Start Risk-Free Purchase</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="valuation" class="py-16 sm:py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-outfit mb-3">Why <span class="brand-text">niqi</span><span class="brand-x">X</span> Commands Premium Value</h2>
+                    <p class="text-slate-400 text-xs sm:text-sm md:text-base font-outfit">In today's digital landscape, ultra-short .com domains ending in high-value letters like 'X' are rare, iconic, and appreciate exponentially.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden group">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl sm:text-2xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-outfit mb-2 text-white">The 'X' Factor Impact</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed font-outfit">
+                            The letter 'X' represents futuristic innovation, high tech, exchange platforms, and elite performance (e.g., SpaceX, X.com, iPhone X).
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden group">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl sm:text-2xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-outfit mb-2 text-white">Phonetic Perfection</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed font-outfit">
+                            Pronounced naturally as "Nee-KIX" or "NI-KIX", the name carries punchy rhythm, symmetrical visual balance, and effortless global pronunciation.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden group">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-xl sm:text-2xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-outfit mb-2 text-white">Unbeatable Clean History</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed font-outfit">
+                            Clean registration record, free of trademarks, restrictions, or penalties. Ready for immediate worldwide brand deployment.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="use-cases" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+                <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-outfit mb-3">Target Brand Industry Concepts</h2>
+                <p class="text-slate-400 font-outfit text-xs sm:text-sm md:text-base">See how <span class="text-white font-semibold">niqiX.com</span> fits across high-growth global industries.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 font-outfit" id="useCaseTabs">
+                <button onclick="switchTab('ai')" id="tab-ai" class="tab-btn px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-purple-500/50 bg-purple-600/20 text-purple-300 font-semibold text-xs sm:text-sm transition-all flex items-center space-x-2 shadow-lg">
+                    <i class="fa-solid fa-microchip"></i><span>AI & Neural Tech</span>
+                </button>
+                <button onclick="switchTab('fintech')" id="tab-fintech" class="tab-btn px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white font-semibold text-xs sm:text-sm transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-chart-pie"></i><span>Fintech & Trading</span>
+                </button>
+                <button onclick="switchTab('fashion')" id="tab-fashion" class="tab-btn px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white font-semibold text-xs sm:text-sm transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-shirt"></i><span>Next-Gen Apparel</span>
+                </button>
+                <button onclick="switchTab('web3')" id="tab-web3" class="tab-btn px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white font-semibold text-xs sm:text-sm transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-cubes"></i><span>Web3 & Crypto</span>
+                </button>
+            </div>
+
+            <!-- Dynamic Tab Display Container -->
+            <div class="glass-card p-6 sm:p-10 rounded-3xl max-w-4xl mx-auto min-h-[220px] flex items-center justify-center text-center shadow-2xl border-purple-500/30" id="tabContent">
+                <!-- Javascript dynamic content injects here -->
+            </div>
+        </section>
+
+        <!-- Direct Contact Section (مكان إرسال الرسائل وتلقي الاستفسارات) -->
+        <section id="contact" class="py-16 sm:py-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative font-outfit">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 text-xs font-semibold mb-3 shadow-lg">
+                    <i class="fa-solid fa-envelope-open-text text-purple-400"></i>
+                    <span>Direct Communication</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">Send a Message to the Owner</h2>
+                <p class="text-slate-400 text-xs sm:text-sm">Have a custom question, want to discuss pricing, or make an inquiry? Send a message directly.</p>
+            </div>
+
+            <div class="glass-card p-6 sm:p-10 rounded-3xl shadow-2xl border border-purple-500/30">
+                <form action="https://formspree.io/f/xlgkqkpd" method="POST" onsubmit="handleDirectContact(event)" class="space-y-4" id="directContactForm">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Your Name</label>
+                            <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Email Address</label>
+                            <input type="email" name="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Subject / Inquiry Type</label>
+                        <select name="subject" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm cursor-pointer">
+                            <option value="Price Inquiry & Negotiation">💰 Price Inquiry & Negotiation</option>
+                            <option value="Instant Purchase Question">⚡ Instant Purchase Question</option>
+                            <option value="Lease-to-Own Details">⏳ Lease-to-Own Details</option>
+                            <option value="Other Question">💬 Other Question</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Your Message</label>
+                        <textarea name="message" rows="4" required placeholder="Write your message or proposed offer details here..." class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-purple-600/30 transition-all flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                        <span>Send Message Now</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="escrow" class="py-16 sm:py-24 bg-black/70 border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-outfit mb-3">100% Secure Transfer Guarantee</h2>
+                    <p class="text-slate-400 font-outfit text-xs sm:text-sm md:text-base">All transactions are processed through accredited tier-1 domain escrow services to guarantee zero risk.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 font-outfit">
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl text-center relative">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-purple-600 text-white font-bold flex items-center justify-center mx-auto mb-4 text-base sm:text-lg shadow-lg shadow-purple-600/40">1</div>
+                        <h4 class="font-bold font-outfit mb-2 text-white text-base sm:text-lg">Agreement & Offer</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Buyer and seller agree on the final acquisition price via Escrow/Dan.com.</p>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl text-center relative">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-purple-600 text-white font-bold flex items-center justify-center mx-auto mb-4 text-base sm:text-lg shadow-lg shadow-purple-600/40">2</div>
+                        <h4 class="font-bold font-outfit mb-2 text-white text-base sm:text-lg">Secure Payment</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Funds are deposited into trusted third-party escrow holding account.</p>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl text-center relative">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-purple-600 text-white font-bold flex items-center justify-center mx-auto mb-4 text-base sm:text-lg shadow-lg shadow-purple-600/40">3</div>
+                        <h4 class="font-bold font-outfit mb-2 text-white text-base sm:text-lg">Domain Transfer</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Authorization code is released for seamless registrar push or transfer.</p>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl text-center relative">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-emerald-600 text-white font-bold flex items-center justify-center mx-auto mb-4 text-base sm:text-lg shadow-lg shadow-emerald-600/40"><i class="fa-solid fa-check"></i></div>
+                        <h4 class="font-bold font-outfit mb-2 text-white text-base sm:text-lg">Ownership Complete</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Escrow releases payment to seller. Buyer assumes full ownership of niqiX.com.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 sm:mt-16 flex flex-wrap justify-center items-center gap-6 sm:gap-10 opacity-75">
+                    <span class="text-slate-300 font-extrabold tracking-widest text-xs sm:text-sm flex items-center space-x-2 font-outfit"><i class="fa-solid fa-shield-halved text-purple-400 text-base"></i><span>ESCROW.COM</span></span>
+                    <span class="text-slate-300 font-extrabold tracking-widest text-xs sm:text-sm flex items-center space-x-2 font-outfit"><i class="fa-solid fa-lock text-blue-400 text-base"></i><span>DAN.COM</span></span>
+                    <span class="text-slate-300 font-extrabold tracking-widest text-xs sm:text-sm flex items-center space-x-2 font-outfit"><i class="fa-solid fa-building text-emerald-400 text-base"></i><span>SEDO.COM</span></span>
+                    <span class="text-slate-300 font-extrabold tracking-widest text-xs sm:text-sm flex items-center space-x-2 font-outfit"><i class="fa-solid fa-globe text-amber-400 text-base"></i><span>DYNADOT.COM</span></span>
+                    <span class="text-slate-300 font-extrabold tracking-widest text-xs sm:text-sm flex items-center space-x-2 font-outfit"><i class="fa-solid fa-atom text-cyan-400 text-base"></i><span>ATOM.COM</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-16 sm:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative font-outfit">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-outfit mb-3">Frequently Asked Questions</h2>
+                <p class="text-slate-400 text-xs sm:text-sm">Everything you need to know about purchasing niqiX.com</p>
+            </div>
+
+            <div class="space-y-3 sm:space-y-4" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full p-5 sm:p-6 text-left font-bold font-outfit text-white text-sm sm:text-lg flex justify-between items-center focus:outline-none">
+                        <span>How fast is the domain transfer completed?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-purple-400 transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-5 sm:px-6 pb-5 sm:pb-6 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Transfers are typically completed within 1 to 24 hours depending on your chosen domain registrar. We initiate immediate authorization code delivery upon escrow verification.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full p-5 sm:p-6 text-left font-bold font-outfit text-white text-sm sm:text-lg flex justify-between items-center focus:outline-none">
+                        <span>Is the transaction completely safe and protected?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-purple-400 transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-5 sm:px-6 pb-5 sm:pb-6 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Yes. All financial transactions are secured through licensed third-party escrow services such as Escrow.com or Dan.com (a GoDaddy company). Funds are never released until you have verified full ownership.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full p-5 sm:p-6 text-left font-bold font-outfit text-white text-sm sm:text-lg flex justify-between items-center focus:outline-none">
+                        <span>Are there any trademark issues associated with niqiX.com?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-purple-400 transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-5 sm:px-6 pb-5 sm:pb-6 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-white/5 pt-4">
+                        niqiX.com is an invented, highly unique 5-letter brandable domain name with a completely clean registration background and no known trademark conflicts.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/10 bg-black relative z-10 py-8 sm:py-12 font-outfit">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 text-center sm:text-left">
+            <div class="flex items-baseline justify-center sm:justify-start">
+                <span class="brand-text text-xl sm:text-2xl">niqi</span><span class="brand-x text-xl sm:text-2xl">X</span><span class="brand-com text-base sm:text-lg">.com</span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-slate-500">
+                © 2026 niqiX.com. All Rights Reserved. Premium Digital Property Portfolio.
+            </p>
+            <div class="flex items-center justify-center space-x-3 text-xs text-slate-400">
+                <button onclick="openOfferModal()" class="hover:text-purple-400 transition-colors">Inquire</button>
+                <span>•</span>
+                <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+                <span>•</span>
+                <button onclick="showToast('Escrow transfer protection active', 'info')" class="hover:text-purple-400 transition-colors">Security Guarantee</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Offer Modal -->
+    <div id="offerModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 font-outfit">
+        <div class="glass-card bg-brand-card w-full max-w-lg rounded-3xl p-5 sm:p-6 relative border border-purple-500/40 shadow-2xl transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto" id="offerModalCard">
+            
+            <button onclick="closeOfferModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-20">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="text-center mb-4 pr-6">
+                <div class="inline-block mb-1">
+                    <span class="brand-text text-2xl sm:text-3xl">niqi</span><span class="brand-x text-2xl sm:text-3xl">X</span><span class="brand-com text-lg sm:text-xl">.com</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold font-outfit text-white">Submit Acquisition Offer</h3>
+                <p class="text-[11px] text-slate-400">Direct offer to the owner. Response delivered within 12 hours.</p>
+            </div>
+
+            <form id="offerForm" onsubmit="handleOfferSubmit(event)" class="space-y-3">
+                <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Your Full Name</label>
+                    <input type="text" id="buyerName" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Corporate or Personal Email</label>
+                    <input type="email" id="buyerEmail" required placeholder="john@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Preferred Purchase Model</label>
+                    <select id="paymentTypeSelect" onchange="togglePaymentModel(this.value)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm cursor-pointer">
+                        <option value="cash">💳 Full Cash Upfront (Escrow.com / Wire)</option>
+                        <option value="lease">⏳ Lease-to-Own (Flexible Monthly Installments)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300">Offer Amount (USD)</label>
+                        <div class="flex items-center space-x-1 bg-slate-900 border border-purple-500/50 px-2.5 py-1 rounded-xl">
+                            <span class="text-purple-400 font-bold">$</span>
+                            <input type="number" id="offerValueInput" min="1000" max="10000" step="50" value="2500" oninput="updateRangeFromInput(this.value)" class="w-20 bg-transparent text-right text-xs sm:text-sm font-bold font-outfit text-purple-400 focus:outline-none">
+                        </div>
+                    </div>
+                    <input type="range" id="offerRange" min="1000" max="10000" step="50" value="2500" oninput="updateOfferDisplay(this.value)" class="w-full accent-purple-500 bg-slate-800 rounded-lg h-2 cursor-pointer">
+                    <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                        <span>Min $1,000</span>
+                        <span class="text-emerald-400 font-bold">Zero Buyer Fees • Escrow Secured</span>
+                        <span class="text-purple-400 font-bold">Max $10,000</span>
+                    </div>
+
+                    <div id="leaseEstimateBox" class="hidden mt-2 p-2.5 rounded-xl bg-purple-950/40 border border-purple-500/30 text-xs text-purple-200 flex items-center justify-between">
+                        <div class="flex items-center space-x-2 text-xs">
+                            <i class="fa-solid fa-calculator text-purple-400"></i>
+                            <span>Est. 12-Month Lease Plan:</span>
+                        </div>
+                        <span id="monthlyPaymentText" class="font-bold text-white font-outfit text-xs">$208 / month</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Additional Message / Terms (Optional)</label>
+                    <textarea id="buyerMessage" rows="2" placeholder="Specify proposed escrow service, closing timeline, or preferred installment duration..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-purple-600/30 transition-all flex items-center justify-center space-x-2 mt-2">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span>Transmit Official Offer</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const useCasesData = {
+            ai: {
+                badge: "Artificial Intelligence & Machine Learning",
+                title: "niqiX AI — Next-Generation Intelligence Engine",
+                desc: "An ideal identity for an LLM platform, AI automation suite, predictive analytics software, or autonomous robotics firm. Short, futuristic, and highly scalable."
+            },
+            fintech: {
+                badge: "Financial Tech & Crypto Exchange",
+                title: "niqiX Exchange & Quantitative Trading",
+                desc: "Perfect brand naming for high-frequency trading platforms, decentralized crypto exchanges, digital asset wallets, or modern fintech banking applications."
+            },
+            fashion: {
+                badge: "Luxury Tech Apparel & Streetwear",
+                title: "niqiX — Cyberpunk & Performance Athletic Wear",
+                desc: "Carries natural phonetic resonance similar to leading athletic footwear and streetwear brands. Premium fit for next-gen apparel and wearable tech."
+            },
+            web3: {
+                badge: "Web3 Infrastructure & Layer 2",
+                title: "niqiX Network — Scalable Web3 Infrastructure",
+                desc: "High-impact identity for blockchain protocols, zero-knowledge rollup networks, digital identity suites, or gaming ecosystems demanding elite branding."
+            }
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            switchTab('ai');
+        });
+
+        function switchTab(tabKey) {
+            const content = useCasesData[tabKey];
+            if (!content) return;
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-purple-500/50', 'bg-purple-600/20', 'text-purple-300', 'shadow-lg');
+                btn.classList.add('border-slate-800', 'bg-slate-900/60', 'text-slate-400');
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabKey}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-slate-800', 'bg-slate-900/60', 'text-slate-400');
+                activeBtn.classList.add('border-purple-500/50', 'bg-purple-600/20', 'text-purple-300', 'shadow-lg');
+            }
+
+            const displayEl = document.getElementById('tabContent');
+            displayEl.style.opacity = '0';
+            setTimeout(() => {
+                displayEl.innerHTML = `
+                    <div class="space-y-3 sm:space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-[11px] sm:text-xs font-semibold mb-1 font-outfit">
+                            ${content.badge}
+                        </div>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold font-outfit text-white">${content.title}</h3>
+                        <p class="text-slate-300 max-w-2xl mx-auto leading-relaxed font-outfit text-xs sm:text-sm md:text-base">
+                            ${content.desc}
+                        </p>
+                    </div>
+                `;
+                displayEl.style.opacity = '1';
+            }, 150);
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('mobileMenuIcon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-lg sm:text-xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-lg sm:text-xl';
+            }
+        }
+
+        function copyDomainName() {
+            const textToCopy = "niqiX.com";
+            const tempInput = document.createElement('input');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                const btnText = document.getElementById('copyBtnText');
+                btnText.innerText = "Copied!";
+                showToast("Domain name 'niqiX.com' copied to clipboard!", "success");
+                setTimeout(() => {
+                    btnText.innerText = "Copy Domain";
+                }, 2000);
+            } catch (err) {
+                showToast("Failed to copy domain name", "error");
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        function openOfferModal() {
+            const modal = document.getElementById('offerModal');
+            const modalCard = document.getElementById('offerModalCard');
+            modal.classList.remove('pointer-events-none');
+            modal.classList.remove('opacity-0');
+            modalCard.classList.remove('scale-95');
+            modalCard.classList.add('scale-100');
+        }
+
+        function closeOfferModal() {
+            const modal = document.getElementById('offerModal');
+            const modalCard = document.getElementById('offerModalCard');
+            modal.classList.add('opacity-0');
+            modal.classList.add('pointer-events-none');
+            modalCard.classList.remove('scale-100');
+            modalCard.classList.add('scale-95');
+        }
+
+        function updateOfferDisplay(val) {
+            document.getElementById('offerValueInput').value = val;
+            calculateLeaseEstimate(val);
+        }
+
+        function updateRangeFromInput(val) {
+            let numVal = parseInt(val) || 1000;
+            if (numVal > 10000) numVal = 10000;
+            if (numVal < 1000) numVal = 1000;
+            document.getElementById('offerRange').value = numVal;
+            calculateLeaseEstimate(numVal);
+        }
+
+        function togglePaymentModel(model) {
+            const leaseBox = document.getElementById('leaseEstimateBox');
+            if (model === 'lease') {
+                leaseBox.classList.remove('hidden');
+                calculateLeaseEstimate(document.getElementById('offerValueInput').value);
+            } else {
+                leaseBox.classList.add('hidden');
+            }
+        }
+
+        function calculateLeaseEstimate(val) {
+            const monthly = Math.round(val / 12);
+            const formatted = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(monthly);
+            document.getElementById('monthlyPaymentText').innerText = `${formatted} / month`;
+        }
+
+        function handleOfferSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('buyerName').value;
+            const offerVal = document.getElementById('offerValueInput').value;
+            const payType = document.getElementById('paymentTypeSelect').value;
+            const formattedVal = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(offerVal);
+            
+            const typeText = payType === 'lease' ? `(Lease-to-Own ~$${Math.round(offerVal/12)}/mo)` : '(Cash Upfront)';
+
+            closeOfferModal();
+            showToast(`Thank you ${name}! Your offer of ${formattedVal} ${typeText} was transmitted successfully.`, "success");
+            
+            document.getElementById('offerForm').reset();
+            updateOfferDisplay(2500);
+            document.getElementById('offerRange').value = 2500;
+            togglePaymentModel('cash');
+        }
+
+        function handleDirectContact(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    showToast("Your message has been sent successfully to the owner!", "success");
+                    form.reset();
+                } else {
+                    showToast("There was a problem sending your message. Please try again.", "error");
+                }
+            }).catch(error => {
+                showToast("Network error. Please check your connection.", "error");
+            });
+        }
+
+        function showToast(message, type = "info") {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            
+            let badgeBg = "bg-purple-600";
+            let icon = "fa-info-circle";
+            if (type === "success") {
+                badgeBg = "bg-emerald-600";
+                icon = "fa-check-circle";
+            } else if (type === "error") {
+                badgeBg = "bg-red-600";
+                icon = "fa-exclamation-triangle";
+            }
+
+            toast.className = `pointer-events-auto glass-card border border-white/20 p-3.5 sm:p-4 rounded-2xl shadow-2xl flex items-center space-x-3 text-xs sm:text-sm text-white transform translate-x-full transition-transform duration-300 max-w-xs sm:max-w-sm font-outfit`;
+            toast.innerHTML = `
+                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl ${badgeBg} flex items-center justify-center text-white shrink-0 shadow-lg">
+                    <i class="fa-solid ${icon}"></i>
+                </div>
+                <div class="flex-grow">${message}</div>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-x-full');
+            }, 50);
+
+            setTimeout(() => {
+                toast.classList.add('translate-x-full');
+                setTimeout(() => {
+                    if (container.contains(toast)) {
+                        container.removeChild(toast);
+                    }
+                }, 300);
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
