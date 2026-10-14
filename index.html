@@ -107,7 +107,6 @@
             font-family: 'Outfit', sans-serif;
         }
 
-        /* Ambient Immersive Glowing Gradients (خلفية هادئة ومريحة للعين) */
         .bg-grid-pattern {
             background-size: 48px 48px;
             background-image: 
@@ -123,7 +122,6 @@
             background: radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.02) 40%, rgba(3, 3, 5, 0) 65%);
         }
 
-        /* Ultra Premium Glassmorphism Card Style */
         .glass-card {
             background: linear-gradient(135deg, rgba(13, 13, 22, 0.9) 0%, rgba(8, 8, 14, 0.95) 100%);
             backdrop-filter: blur(20px);
@@ -138,7 +136,6 @@
             transform: translateY(-3px);
         }
 
-        /* Shimmer Text Effect */
         .shimmer-text {
             background: linear-gradient(90deg, #f8fafc 0%, #c084fc 50%, #f8fafc 100%);
             background-size: 200% auto;
@@ -147,7 +144,6 @@
             animation: shimmer 4s linear infinite;
         }
 
-        /* Glow Button Animation */
         .btn-glow {
             position: relative;
             transition: all 0.3s ease;
@@ -169,7 +165,6 @@
             opacity: 0.85;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -498,11 +493,10 @@
 
             <!-- Dynamic Tab Display Container -->
             <div class="glass-card p-6 sm:p-10 rounded-3xl max-w-4xl mx-auto min-h-[220px] flex items-center justify-center text-center shadow-2xl border-purple-500/30" id="tabContent">
-                <!-- Javascript dynamic content injects here -->
             </div>
         </section>
 
-        <!-- Direct Contact Section (مكان إرسال الرسائل وتلقي الاستفسارات) -->
+        <!-- Direct Contact Section -->
         <section id="contact" class="py-16 sm:py-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative font-outfit">
             <div class="text-center mb-10">
                 <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 text-xs font-semibold mb-3 shadow-lg">
@@ -593,7 +587,6 @@
             </div>
 
             <div class="space-y-3 sm:space-y-4" id="faqAccordion">
-                <!-- FAQ Item 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden">
                     <button onclick="toggleFaq(1)" class="w-full p-5 sm:p-6 text-left font-bold font-outfit text-white text-sm sm:text-lg flex justify-between items-center focus:outline-none">
                         <span>How fast is the domain transfer completed?</span>
@@ -604,7 +597,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 2 -->
                 <div class="glass-card rounded-2xl overflow-hidden">
                     <button onclick="toggleFaq(2)" class="w-full p-5 sm:p-6 text-left font-bold font-outfit text-white text-sm sm:text-lg flex justify-between items-center focus:outline-none">
                         <span>Is the transaction completely safe and protected?</span>
@@ -615,7 +607,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 3 -->
                 <div class="glass-card rounded-2xl overflow-hidden">
                     <button onclick="toggleFaq(3)" class="w-full p-5 sm:p-6 text-left font-bold font-outfit text-white text-sm sm:text-lg flex justify-between items-center focus:outline-none">
                         <span>Are there any trademark issues associated with niqiX.com?</span>
@@ -664,20 +655,20 @@
                 <p class="text-[11px] text-slate-400">Direct offer to the owner. Response delivered within 12 hours.</p>
             </div>
 
-            <form id="offerForm" onsubmit="handleOfferSubmit(event)" class="space-y-3">
+            <form id="offerForm" action="https://formspree.io/f/xzedjgjn" method="POST" onsubmit="handleOfferSubmit(event)" class="space-y-3">
                 <div>
                     <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Your Full Name</label>
-                    <input type="text" id="buyerName" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm">
+                    <input type="text" name="name" id="buyerName" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm">
                 </div>
 
                 <div>
                     <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Corporate or Personal Email</label>
-                    <input type="email" id="buyerEmail" required placeholder="john@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm">
+                    <input type="email" name="email" id="buyerEmail" required placeholder="john@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm">
                 </div>
 
                 <div>
                     <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Preferred Purchase Model</label>
-                    <select id="paymentTypeSelect" onchange="togglePaymentModel(this.value)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm cursor-pointer">
+                    <select name="purchase_model" id="paymentTypeSelect" onchange="togglePaymentModel(this.value)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs sm:text-sm cursor-pointer">
                         <option value="cash">💳 Full Cash Upfront (Escrow.com / Wire)</option>
                         <option value="lease">⏳ Lease-to-Own (Flexible Monthly Installments)</option>
                     </select>
@@ -688,7 +679,7 @@
                         <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300">Offer Amount (USD)</label>
                         <div class="flex items-center space-x-1 bg-slate-900 border border-purple-500/50 px-2.5 py-1 rounded-xl">
                             <span class="text-purple-400 font-bold">$</span>
-                            <input type="number" id="offerValueInput" min="1000" max="10000" step="50" value="2500" oninput="updateRangeFromInput(this.value)" class="w-20 bg-transparent text-right text-xs sm:text-sm font-bold font-outfit text-purple-400 focus:outline-none">
+                            <input type="number" name="amount" id="offerValueInput" min="1000" max="10000" step="50" value="2500" oninput="updateRangeFromInput(this.value)" class="w-20 bg-transparent text-right text-xs sm:text-sm font-bold font-outfit text-purple-400 focus:outline-none">
                         </div>
                     </div>
                     <input type="range" id="offerRange" min="1000" max="10000" step="50" value="2500" oninput="updateOfferDisplay(this.value)" class="w-full accent-purple-500 bg-slate-800 rounded-lg h-2 cursor-pointer">
@@ -709,42 +700,14 @@
 
                 <div>
                     <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Additional Message / Terms (Optional)</label>
-                    <textarea id="buyerMessage" rows="2" placeholder="Specify proposed escrow service, closing timeline, or preferred installment duration..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs resize-none"></textarea>
+                    <textarea name="message" id="buyerMessage" rows="2" placeholder="Specify proposed escrow service, closing timeline, or preferred installment duration..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white focus:outline-none focus:border-purple-500 text-xs resize-none"></textarea>
                 </div>
 
-                <form action="https://formspree.io/f/xzedjgjn" method="POST">
-    <div class="space-y-4">
-        <div>
-            <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Your Full Name</label>
-            <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-xl bg-[#0a0612]/80 border border-purple-500/30 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500">
-        </div>
-        <div>
-            <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Corporate or Personal Email</label>
-            <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-xl bg-[#0a0612]/80 border border-purple-500/30 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500">
-        </div>
-        <div>
-            <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Preferred Purchase Model</label>
-            <select name="purchase_model" class="w-full px-4 py-2.5 rounded-xl bg-[#0a0612]/80 border border-purple-500/30 text-white text-sm focus:outline-none focus:border-purple-500">
-                <option>Full Cash Upfront (Escrow.com / Wire)</option>
-                <option>Installment Plan</option>
-                <option>Lease-to-Own</option>
-            </select>
-        </div>
-        <div>
-            <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Offer Amount (USD)</label>
-            <input type="number" name="amount" value="2500" class="w-full px-4 py-2.5 rounded-xl bg-[#0a0612]/80 border border-purple-500/30 text-white text-sm focus:outline-none focus:border-purple-500">
-        </div>
-        <div>
-            <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Additional Message / Terms (Optional)</label>
-            <textarea name="message" rows="2" class="w-full px-4 py-2.5 rounded-xl bg-[#0a0612]/80 border border-purple-500/30 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500"></textarea>
-        </div>
-        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-medium transition-all shadow-lg shadow-purple-500/25 flex items-center justify-center space-x-2 group">
-            <i class="fa-solid fa-paper-plane text-xs"></i>
-            <span>Transmit Official Offer</span>
-        </button>
-    </div>
-</form>
-</form>
+                <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-medium transition-all shadow-lg shadow-purple-500/25 flex items-center justify-center space-x-2 group">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span>Transmit Official Offer</span>
+                </button>
+            </form>
         </div>
     </div>
 
@@ -903,20 +866,27 @@
 
         function handleOfferSubmit(e) {
             e.preventDefault();
-            const name = document.getElementById('buyerName').value;
-            const offerVal = document.getElementById('offerValueInput').value;
-            const payType = document.getElementById('paymentTypeSelect').value;
-            const formattedVal = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(offerVal);
-            
-            const typeText = payType === 'lease' ? `(Lease-to-Own ~$${Math.round(offerVal/12)}/mo)` : '(Cash Upfront)';
+            const form = e.target;
+            const formData = new FormData(form);
 
-            closeOfferModal();
-            showToast(`Thank you ${name}! Your offer of ${formattedVal} ${typeText} was transmitted successfully.`, "success");
-            
-            document.getElementById('offerForm').reset();
-            updateOfferDisplay(2500);
-            document.getElementById('offerRange').value = 2500;
-            togglePaymentModel('cash');
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    closeOfferModal();
+                    showToast("Your official offer has been submitted successfully!", "success");
+                    form.reset();
+                    updateOfferDisplay(2500);
+                    document.getElementById('offerRange').value = 2500;
+                    togglePaymentModel('cash');
+                } else {
+                    showToast("There was a problem submitting your offer. Please try again.", "error");
+                }
+            }).catch(error => {
+                showToast("Network error. Please check your connection.", "error");
+            });
         }
 
         function handleDirectContact(e) {
